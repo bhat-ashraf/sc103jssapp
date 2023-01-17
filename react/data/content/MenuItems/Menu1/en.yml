@@ -1,0 +1,8 @@
+id: menu-1
+displayName: menu 1
+# Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
+template: RestaurantMenu-ContentList-Item-Template
+fields:
+  ItemName: menu-1
+  ItemType: non-veg
+  ItemQuantity: 10 plates

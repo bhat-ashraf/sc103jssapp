@@ -26,7 +26,7 @@ export default function addRoutesToManifest(manifest) {
   // You can add additional non-default route types using `manifest.addRouteType()`,
   // which routes can use by setting `template: YourCustomRouteTypeName` in their definition.
   const appTemplateSection = 'Page Metadata';
-
+  const RestaurantMenuSection = "RestaurantMenu";
   manifest.setDefaultRouteType({
     name: 'App Route',
     fields: [
@@ -35,6 +35,12 @@ export default function addRoutesToManifest(manifest) {
         displayName: 'Page Title',
         section: appTemplateSection,
         type: CommonFieldTypes.SingleLineText,
+      },
+      {
+        name: 'Menu',
+        displayName: 'Restaurant Menu',
+        section: RestaurantMenuSection,
+        type: CommonFieldTypes.ContentList,
       },
     ],
     insertOptions: ['App Route'],

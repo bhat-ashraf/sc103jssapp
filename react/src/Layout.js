@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import deepEqual from 'deep-equal';
 import Helmet from 'react-helmet';
+import PageHeader from './components/PageHeader';
 
 // Using bootstrap is completely optional. It's used here to provide a clean layout for samples,
 // without needing extra CSS in the sample app. Remove it in package.json as well if it's removed here.
@@ -70,7 +71,7 @@ const Layout = ({ route }) => (
     */}
     <VisitorIdentification />
 
-    <Navigation />
+    <PageHeader />
 
     {/* root placeholder for the app, which we add components to using route data */}
     <div className="container">
