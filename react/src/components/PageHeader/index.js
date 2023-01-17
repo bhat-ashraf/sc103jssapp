@@ -74,9 +74,7 @@ class PageHeader extends React.Component {
                           title={mainnavitem.__typename}
                           id="basic-nav-dropdown"
                         >
-                          <Nav.Link href={mainnavitem.mainnavurl.url}>
-                            {mainnavitem.jss}
-                          </Nav.Link>
+                          <Nav.Link href={mainnavitem.mainnavurl.url}>{mainnavitem.jss}</Nav.Link>
 
                           {mainnavitem.children.results &&
                             mainnavitem.children.results.map((subnavitem, index) => (
