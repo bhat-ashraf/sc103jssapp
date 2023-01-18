@@ -25,6 +25,9 @@ placeholders:
   jss-main:
     - componentName: HomeCarousel
       fields:
+        CarouselItems:
+        - id: Carousel-1
+        - id: Carousel-2
         
     - componentName: PageHeader
       fields:

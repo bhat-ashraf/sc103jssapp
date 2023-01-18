@@ -1,0 +1,10 @@
+id: Carousel-1
+displayName: Carousel 1
+url: ""
+template: CarouselItems-ContentList-Item-Template
+fields:
+  Title: Carousel-1
+  Description: Carousel page title
+  Image:
+    src: /data/media/img/jss_logo.png
+    alt: "Carousel alt"

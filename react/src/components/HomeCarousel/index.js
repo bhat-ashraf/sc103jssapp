@@ -9,17 +9,22 @@ class HomeCarousel extends React.Component {
   render() {
     return (
       <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+        
+        {this.props.fields.data.datasource.carouselItems.targetItems &&
+          this.props.fields.data.datasource.carouselItems.targetItems.map((carouselItem, index) => (
+            <Carousel.Item key={index}>
+              <img
+                className="d-block w-100"
+                src={carouselItem.image.jsonValue.value.src}
+                alt={carouselItem.image.jsonValue.value.alt}
+              />
+              <Carousel.Caption>
+                <h3>
+                  <a href={carouselItem.url.url}>{carouselItem.title.value}</a>
+                </h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
       </Carousel>
     );
   }
