@@ -9,7 +9,6 @@ class HomeCarousel extends React.Component {
   render() {
     return (
       <Carousel>
-        
         {this.props.fields.data.datasource.carouselItems.targetItems &&
           this.props.fields.data.datasource.carouselItems.targetItems.map((carouselItem, index) => (
             <Carousel.Item key={index}>

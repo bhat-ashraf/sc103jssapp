@@ -35,7 +35,9 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@apollo/client": "^3.5.6",
+    "@sitecore-jss/sitecore-jss-forms": "^21.0.5",
     "@sitecore-jss/sitecore-jss-react": "^21.0.2",
+    "@sitecore-jss/sitecore-jss-react-forms": "^21.0.5",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.2",
     "cross-fetch": "^3.0.6",
@@ -52,7 +54,9 @@
     "react-i18next": "~11.18.1",
     "react-router-dom": "~5.1.0",
     "react-scripts": "4.0.1",
-    "serialize-javascript": "~3.1.0"
+    "react-slick": "^0.29.0",
+    "serialize-javascript": "~3.1.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -106,7 +110,7 @@
     "start:watch-components": "node scripts/generate-component-factory.js --watch",
     "build:client": "cross-env-shell PUBLIC_URL=$npm_package_config_sitecoreDistPath \"react-scripts build\"",
     "build:client:rendering-host": "cross-env-shell PUBLIC_URL=$npm_package_config_tunnelUrl \"react-scripts build\"",
-    "build:server": "cross-env-shell NODE_ENV=production \"webpack --config server/server.webpack.config.js\"",
+    "build:server": "cross-env-shell NODE_ENV=development \"webpack --config server/server.webpack.config.js\"",
     "bootstrap": "node scripts/bootstrap.js",
     "graphql:update": "node -r @babel/register ./scripts/update-graphql-fragment-data.js",
     "test": "react-scripts test --env=jsdom",

@@ -23,7 +23,7 @@ placeholders:
     - componentName: RestaurantHero
       fields:
         PageTitle: pageTitle
-        Title: Adventure Hero title fields
+        Title: Adventure Hero title fields yml
         Image:
           src: https://mdbootstrap.com/img/new/slides/041.webp
         ContactUsLink:

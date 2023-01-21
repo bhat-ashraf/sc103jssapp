@@ -17,22 +17,26 @@ id: Restaurant1
 fields:
   pageTitle: Welcome to Sitecore JSS
   Menu:
-  - id: menu-1
-  - id: menu-2
+    - id: menu-1
+    - id: menu-2
 # Define the page layout starting at the root placeholder - in this case, 'main'
 # root placeholder names are defined in the package.json config section (required for Sitecore deployment)
 placeholders:
   jss-main:
+    - componentName: RestaurantOpeningHours
+      fields:
+        OpeningHours: 10am-4pm
+        ClosingHours: 5pm-6am
     - componentName: HomeCarousel
       fields:
         CarouselItems:
-        - id: Carousel-1
-        - id: Carousel-2
-        
+          - id: Carousel-1
+          - id: Carousel-2
+
     - componentName: PageHeader
       fields:
         heading: test here header component
-        
+
     - componentName: RestaurantMenu
       fields:
         ComponentTitle: Menu Component title
