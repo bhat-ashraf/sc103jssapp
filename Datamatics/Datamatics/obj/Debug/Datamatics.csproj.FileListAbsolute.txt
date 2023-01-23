@@ -191,3 +191,10 @@ E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\System.Text.Encod
 E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\System.Threading.Tasks.Extensions.xml
 E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\System.ValueTuple.xml
 E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\System.Web.Http.Cors.xml
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\RazorGenerator.Mvc.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.LayoutService.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.Mvc.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.Web.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\WebActivatorEx.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.LayoutService.xml
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.Web.xml
