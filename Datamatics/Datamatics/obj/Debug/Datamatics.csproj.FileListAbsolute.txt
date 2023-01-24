@@ -198,3 +198,13 @@ E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.Web.dll
 E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\WebActivatorEx.dll
 E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.LayoutService.xml
 E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.Web.xml
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.Client.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.ContentSearch.Client.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.ContentSearch.Data.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.ContentSearch.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.ContentSearch.Linq.dll
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.Client.xml
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.ContentSearch.xml
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.ContentSearch.Client.xml
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.ContentSearch.Data.xml
+E:\sitecore10jsstraining\sc103jssapp\Datamatics\Datamatics\bin\Sitecore.ContentSearch.Linq.xml
