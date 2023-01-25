@@ -14,6 +14,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.Linq;
 
 namespace Datamatics.Resolvers
 {
@@ -48,24 +49,24 @@ namespace Datamatics.Resolvers
                                                     .Where(x => x.TagsList
                                                     .Any(y => string.Equals(y.TagItem, searchQuery, StringComparison.OrdinalIgnoreCase)))
                                                     .Select(x => x.Id)
-                                                    .ToList();
-            //var result = tagListMappings.SelectMany(x => x.tagslist, (x, t) => new { x, t })
-            //                .Where(x => x.t.tagitem == searchQuery)
-            //                .Select(x => x.x.id).ToList();           
+                                                    .ToList();       
 
             string dbName = Sitecore.Context.Database.Name;
             ISearchIndex index = ContentSearchManager.GetIndex($"sitecore_{dbName}_index");
             using (IProviderSearchContext context = index.CreateSearchContext())
             {
-                var filterPredicate = PredicateBuilder.True<SearchResultItem>(); filterPredicate.And(x => x.TemplateName == "RestaurantPage");
-                //filterPredicate.Or(x => x.TemplateName == "AdventurePage");
-                //filterPredicate.Or(x => x.TemplateName == "LeisurePage");                 
-                //var filterTagLists = PredicateBuilder.True<SearchResultItem>();
-                //filterTagLists.And(x => tagListIdsForQueryString.Contains(x.Fields["priceapikey_t"].ToString())); 
-                var results = context.GetQueryable<SearchResultItem>()
-                                     .Where(x => x.TemplateName == "RestaurantPage");
+                var filterByTemplateName = PredicateBuilder.True<SearchResultItem>(); 
+                filterByTemplateName = filterByTemplateName.Or(x => x.TemplateName == "RestaurantPage");
+                filterByTemplateName = filterByTemplateName.Or(x => x.TemplateName == "AdventurePage");
+                filterByTemplateName = filterByTemplateName.Or(x => x.TemplateName == "LeisurePage");
+
+                var appliedFilter = PredicateBuilder.True<SearchResultItem>();
+                appliedFilter = appliedFilter.And(filterByTemplateName);
+
+                var query = context.GetQueryable<SearchResultItem>() .Filter(appliedFilter);
+
                 List<SearchResultItem> sitecoreResults = new List<SearchResultItem>();
-                foreach (var res in results)
+                foreach (var res in query)
                 {
                     try
                     {
@@ -85,7 +86,11 @@ namespace Datamatics.Resolvers
                     Title = x.Fields["title_t"]?.ToString(),
                     Description = x.Fields["description_t"]?.ToString(),
                 }).ToList();
-                return responseSitecoreResults;
+
+                return new
+                {
+                    tagListResults = responseSitecoreResults
+                };
             }
         }
     }
