@@ -36,7 +36,7 @@ namespace Datamatics.Controllers
                                             ItemName = x.Fields["ItemName"].Value,
                                             ItemType = x.Fields["ItemType"].Value,
                                             ItemPrice = x.Fields["ItemPrice"].Value,
-                                            ItemDetail = x.Fields["ItemDetail"].Value
+                                            ItemDetail = x.Fields["ItemQuantity"].Value
                                         });
 
             return response;
